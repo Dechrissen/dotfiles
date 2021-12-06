@@ -1,15 +1,23 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# ________     _______       _________
+# ___  __ \    ___    |____________  /______________________________
+# __  / / /    __  /| |_  __ \  __  /_  _ \_  ___/_  ___/  _ \_  __ \
+# _  /_/ /     _  ___ |  / / / /_/ / /  __/  /   _(__  )/  __/  / / /
+# /_____/      /_/  |_/_/ /_/\__,_/  \___//_/    /____/ \___//_/ /_/
+#
+# Derek Andersen
+# https://github.com/Dechrissen
+# https://derekandersen.net
+#
+# My personal .bashrc :)
 
-# If not running interactively, don't do anything
+
+# if not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
@@ -29,24 +37,11 @@ export nanorc='/home/derek/.nanorc'
 export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]] -> \[$(tput sgr0)\]"
 
 alias ls='ls --color=auto'
-#alias dir='dir --color=auto'
-#alias vdir='vdir --color=auto'
-
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-
-# some more ls aliases
-alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
 
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -63,11 +58,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# Python alias
+# Python aliases
 alias python=python3
 alias pip=pip3
-
 alias pokequiz='python -m pokequiz'
 
 # SSH aliases
@@ -80,7 +73,7 @@ alias neofetch="clear && neofetch --kernel_shorthand on --de_version on --gtk2 "
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-
+# fancy greeting
 hour=$(date +"%H")
 # if it is 2 to noon will say good morning
 if [ $hour -ge 2 -a $hour -lt 12 ]
@@ -96,7 +89,6 @@ fi
 
 d=$(date +"%B %d, %Y")
 neofetch
-# echo "$greet Today is $d."
+echo "$greet Today is $d."
 # fortune | cowsay
 echo ""
-
