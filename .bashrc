@@ -11,6 +11,18 @@
 # My personal .bashrc :)
 
 
+# PATH
+# what to add to path
+NPATH="$HOME/.local/bin"
+
+# add it only if required
+case ":${PATH}:" in
+  *:${NPATH}:*) ;;
+  *) PATH=${PATH}:$NPATH ;;
+esac
+
+export PATH
+
 # if not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -61,13 +73,12 @@ fi
 # Python aliases
 alias python=python3
 alias pip=pip3
-alias pokequiz='python -m pokequiz'
 
 # SSH aliases
 alias banjovps='ssh -p 801 dechrissen@banjospeedruns.com'
 alias vps='ssh derek@derekandersen.net'
 
-alias neofetch="clear && neofetch --kernel_shorthand on --de_version on --gtk2 "off" --gtk3 "off" --disk_show '/dev/sda3' --disk_subtitle name --disk_percent on --cpu_cores "physical" --cpu_display "barinfo"  --cpu_temp "C" --memory_percent "on" --memory_display "barinfo" --bar_char '=' '-' --bar_border "on" --bar_colors 6 8 --ascii_distro "Arch" --color_blocks "off" --os_arch on --refresh_rate on "
+alias neofetch="clear && neofetch  --disk_show '/dev/sda3' "
 
 # up and down arrow keys search history related to current partial input
 bind '"\e[A": history-search-backward'
@@ -89,6 +100,9 @@ fi
 
 d=$(date +"%B %d, %Y")
 neofetch
-echo "$greet Today is $d."
+figlet -t "$d" | lolcat
+
+#echo "$greet Today is $d."
 # fortune | cowsay
 echo ""
+
