@@ -46,7 +46,11 @@ export SSH='/home/derek/.ssh'
 export nanorc='/home/derek/.nanorc'
 
 # prompt
-export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]] -> \[$(tput sgr0)\]"
+#export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]] -> \[$(tput sgr0)\]"
+export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;2m\]\h\e[0m] \[\033[38;5;6m\]\w\[$(tput sgr0)\] ❱ \[$(tput sgr0)\]"
+
+# ignore case for tab-completion
+bind "set completion-ignore-case on"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -99,10 +103,10 @@ else # if it is 18 till 2
 fi
 
 d=$(date +"%B %d, %Y")
-neofetch
-figlet -t "$d" | lolcat
+# neofetch
+# figlet -t "$d" | lolcat
 
-#echo "$greet Today is $d."
+# echo "$greet Today is $d."
 # fortune | cowsay
-echo ""
+# echo ""
 

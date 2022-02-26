@@ -1,20 +1,2 @@
-set softwrap
-set tabstospaces
-set tabsize 4
-include "/usr/share/nano/*.nanorc"
-
-set constantshow
-set linenumbers
-set casesensitive
-set historylog
-set positionlog
-set zap
-set autoindent
-
-bind ^C copy main       # CTRC+C - Copy
-bind ^F whereis all     # CTRL+F - Find
-bind ^S savefile main   # CTRL+S - Save
-
-set atblanks
-set cutfromcursor
-set nohelp
+include /usr/share/nano/*.nanorc
+include /usr/share/nano-syntax-highlighting/*.nanorc
