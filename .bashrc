@@ -52,12 +52,14 @@ export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]
 # ignore case for tab-completion
 bind "set completion-ignore-case on"
 
+# Aliases
 alias ls='ls -lah --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias la='ls -A'
 
+alias pushdots='cd ~/dotfiles && git pull && cd scripts && chmod u+x pull-local-changes.sh && ./pull-local-changes.sh'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
