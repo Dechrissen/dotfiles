@@ -61,6 +61,16 @@ alias la='ls -A'
 
 alias pushdots='cd ~/dotfiles && git pull && cd scripts && chmod u+x pull-local-changes.sh && ./pull-local-changes.sh'
 
+# Python aliases
+alias python=python3
+alias pip=pip3
+
+# SSH aliases
+alias banjovps='ssh -p 801 dechrissen@banjospeedruns.com'
+alias vps='ssh derek@derekandersen.net'
+
+alias neofetch="clear && neofetch  --disk_show '/dev/sda3' "
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -75,16 +85,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Python aliases
-alias python=python3
-alias pip=pip3
-
-# SSH aliases
-alias banjovps='ssh -p 801 dechrissen@banjospeedruns.com'
-alias vps='ssh derek@derekandersen.net'
-
-alias neofetch="clear && neofetch  --disk_show '/dev/sda3' "
 
 # up and down arrow keys search history related to current partial input
 bind '"\e[A": history-search-backward'
