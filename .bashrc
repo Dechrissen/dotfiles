@@ -10,6 +10,9 @@
 #
 # My personal .bashrc :)
 
+# TESSERACT path
+export TESSERACT_PATH="/usr/bin/tesseract"
+export TESSDATA_PREFIX="/usr/share/tessdata/"
 
 # PATH
 # what to add to path
@@ -47,13 +50,15 @@ export nanorc='/home/derek/.nanorc'
 
 # prompt
 #export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]] -> \[$(tput sgr0)\]"
-export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;2m\]\h\e[0m] \[\033[38;5;6m\]\w\[$(tput sgr0)\] ❱ \[$(tput sgr0)\]"
+#export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;2m\]\h\e[0m] \[\033[38;5;6m\]\w\[$(tput sgr0)\] ❱ \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;6m\]\w\[$(tput sgr0)\] ❱ \[$(tput sgr0)\]"
+
 
 # ignore case for tab-completion
 bind "set completion-ignore-case on"
 
 # Aliases
-alias ls='ls -lah --color=auto'
+alias ls='ls -a --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -66,8 +71,8 @@ alias python=python3
 alias pip=pip3
 
 # SSH aliases
-alias banjovps='ssh -p 801 dechrissen@banjospeedruns.com'
-alias vps='ssh derek@derekandersen.net'
+alias banjovps='ssh -i ~/.ssh/banjo -p 801 dechrissen@banjospeedruns.com'
+alias vps='ssh -i ~/.ssh/vps derek@derekandersen.net'
 
 alias neofetch="clear && neofetch  --disk_show '/dev/sda3' "
 
