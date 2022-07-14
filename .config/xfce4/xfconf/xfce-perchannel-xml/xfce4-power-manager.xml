@@ -24,5 +24,9 @@
     <property name="dpms-on-ac-off" type="uint" value="40"/>
     <property name="dpms-on-ac-sleep" type="uint" value="30"/>
     <property name="blank-on-ac" type="int" value="20"/>
+    <property name="show-panel-label" type="int" value="1"/>
+    <property name="show-presentation-indicator" type="bool" value="false"/>
+    <property name="critical-power-level" type="uint" value="15"/>
+    <property name="lock-screen-suspend-hibernate" type="bool" value="false"/>
   </property>
 </channel>

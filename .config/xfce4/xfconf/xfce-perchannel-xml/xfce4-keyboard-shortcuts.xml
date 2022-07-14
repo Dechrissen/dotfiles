@@ -59,12 +59,12 @@
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Super&gt;Return" type="string" value="alacritty"/>
-      <property name="&lt;Super&gt;d" type="string" value="dmenu_run -i -b -p &apos;dmenu&apos; -fn &apos;Roboto Mono:regular:pixelsize=28&apos; -nb &apos;#484848&apos; -nf &apos;#ff9b04&apos; -sf &apos;#eeeeee&apos; -sb &apos;#7b888d&apos;"/>
       <property name="&lt;Super&gt;b" type="string" value="exo-open --launch WebBrowser"/>
       <property name="Search" type="string" value="/usr/bin/xfce4-appfinder"/>
       <property name="Tools" type="string" value="/usr/bin/xfce4-settings-manager"/>
       <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
       <property name="End" type="string" value="xflock4"/>
+      <property name="&lt;Super&gt;d" type="string" value="dmenu_run -i -p &apos;dmenu&apos; -fn &apos;Roboto Mono:regular:pixelsize=28&apos; -nb &apos;#484848&apos; -nf &apos;#ff9b04&apos; -sf &apos;#eeeeee&apos; -sb &apos;#7b888d&apos;"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

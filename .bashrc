@@ -74,7 +74,7 @@ alias pip=pip3
 alias banjovps='ssh -i ~/.ssh/banjo -p 801 dechrissen@banjospeedruns.com'
 alias vps='ssh -i ~/.ssh/vps derek@derekandersen.net'
 
-alias neofetch="clear && neofetch  --disk_show '/dev/sda3' "
+alias neofetch="clear && neofetch"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

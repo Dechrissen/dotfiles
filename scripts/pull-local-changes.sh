@@ -37,5 +37,5 @@ done
 
 echo "Finished copying files from local machine into dotfiles repo."
 
-# add code to auto-commit the changes to my remote
-cd ~/dotfiles && git add --all && git commit -m "Auto-update dotfiles with local changes." && git push origin master
+# auto-commit the changes to my remote
+cd $dotfiles && git add --all && git commit -m "Auto-update dotfiles with local changes." && git push origin master

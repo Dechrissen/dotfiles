@@ -1,7 +1,7 @@
 favorites=firefox.desktop,xfce4-terminal.desktop,org.xfce.Parole.desktop,galculator.desktop,thunar.desktop,xfce4-taskmanager.desktop,xfce-settings-manager.desktop,pavucontrol.desktop,eos-log-tool.desktop,welcome.desktop
-recent=xfce-settings-manager.desktop,xfce4-color-settings.desktop,xfce-session-settings.desktop,xfce-keyboard-settings.desktop,xfce4-appfinder.desktop,xfce4-mime-settings.desktop
+recent=xfce-ui-settings.desktop,xfce4-taskmanager.desktop,xfce4-color-settings.desktop,xfce-keyboard-settings.desktop,panel-preferences.desktop,xfce-settings-manager.desktop
 button-title=
-button-icon=/usr/share/endeavouros/EndeavourOS-icon.png
+button-icon=/usr/share/endeavouros/endeavouros-icon.png
 button-single-row=false
 show-button-title=false
 show-button-icon=true
