@@ -1,5 +1,5 @@
 favorites=firefox.desktop,xfce4-terminal.desktop,org.xfce.Parole.desktop,galculator.desktop,thunar.desktop,xfce4-taskmanager.desktop,xfce-settings-manager.desktop,pavucontrol.desktop,eos-log-tool.desktop,welcome.desktop
-recent=xfce-ui-settings.desktop,xfce4-taskmanager.desktop,xfce4-color-settings.desktop,xfce-keyboard-settings.desktop,panel-preferences.desktop,xfce-settings-manager.desktop
+recent=eos-update-notifier-configure.desktop,xfce-ui-settings.desktop,xfce4-taskmanager.desktop,xfce4-color-settings.desktop,xfce-keyboard-settings.desktop,panel-preferences.desktop
 button-title=
 button-icon=/usr/share/endeavouros/endeavouros-icon.png
 button-single-row=false

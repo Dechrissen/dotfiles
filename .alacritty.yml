@@ -576,7 +576,7 @@ schemes:
 # *solarized-dark
 # *tomorrow-night
 
-colors: *monokai-pro
+colors: *gruvbox-dark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
