@@ -64,7 +64,7 @@
       <property name="Tools" type="string" value="/usr/bin/xfce4-settings-manager"/>
       <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
       <property name="End" type="string" value="xflock4"/>
-      <property name="&lt;Super&gt;d" type="string" value="dmenu_run -i -p &apos;dmenu&apos; -fn &apos;Roboto Mono:regular:pixelsize=28&apos; -nb &apos;#484848&apos; -nf &apos;#ff9b04&apos; -sf &apos;#eeeeee&apos; -sb &apos;#7b888d&apos;"/>
+      <property name="LaunchA" type="string" value="dmenu_run -b -i -p &apos;dmenu&apos; -fn &apos;Roboto Mono:regular:pixelsize=28&apos; -nb &apos;#484848&apos; -nf &apos;#ff9b04&apos; -sf &apos;#eeeeee&apos; -sb &apos;#7b888d&apos;"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
