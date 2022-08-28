@@ -859,7 +859,6 @@ key_bindings:
     # (Windows, Linux, and BSD only)
   - { key: Insert,    mods: Shift, 	   action: Paste                       }
   - { key: Insert,    mods: Control, 	   action: Copy                        }
-  - { key: P,         mods: Shift,         action: PasteSelection              }
   - { key: Key0,      mods: Control,       action: ResetFontSize               }
   - { key: Equals,    mods: Control,       action: IncreaseFontSize            }
   - { key: Plus,      mods: Control,       action: IncreaseFontSize            }
