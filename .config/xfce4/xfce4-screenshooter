@@ -8,4 +8,5 @@ delay=0
 region=1
 show_mouse=1
 show_border=1
+show_in_folder=false
 
