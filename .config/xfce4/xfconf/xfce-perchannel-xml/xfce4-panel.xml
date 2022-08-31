@@ -66,6 +66,7 @@
     <property name="plugin-4" type="string" value="netload"/>
     <property name="plugin-6" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “andersen-2.4ghz” active: andersen-2.4ghz (97%)"/>
         <value type="string" value="wi-fi network connection “andersen-2.4ghz” active: andersen-2.4ghz (93%)"/>
         <value type="string" value="wi-fi network connection “andersen-2.4ghz” active: andersen-2.4ghz (88%)"/>
       </property>

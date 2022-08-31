@@ -72,7 +72,7 @@ alias pip=pip3
 
 # SSH aliases
 alias banjovps='ssh -i ~/.ssh/banjo -p 801 dechrissen@banjospeedruns.com'
-alias vps='ssh -i ~/.ssh/vps derek@derekandersen.net'
+alias vps='ssh -i ~/.ssh/vps -p 8012 derek@derekandersen.net'
 
 alias neofetch="clear && neofetch"
 
