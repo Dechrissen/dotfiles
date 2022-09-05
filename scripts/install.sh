@@ -18,7 +18,7 @@ do
     fi
 done
 
-# copy every file that is supported from ~/.config/ into ~/dotfiles/.config/
+# copy every file that is supported from ~/dotfiles/.config/ into ~/.config/
 for f in $dotfiles/.config/*
 do
     cp -r $f $config && echo $(basename $f) "copied into ~/.config/"
