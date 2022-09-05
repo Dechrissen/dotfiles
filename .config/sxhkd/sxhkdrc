@@ -10,7 +10,7 @@ super + Return
 super + d
 	rofi -modi drun -show drun -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Hack Nerd Font 14"
 
 # show open window
 super + ctrl + d

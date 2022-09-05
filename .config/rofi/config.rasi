@@ -1,11 +1,6 @@
-/*******************************************************
- * ROFI configs i3 Apps menu for EndeavourOS
- * Maintainer: joekamprad <joekamprad@endeavouros.com>
- *******************************************************/
-
 configuration {
-    font:				"Sourcecode Pro Regular 10";
-    show-icons:				true;
+    font:				"Hack 14";
+    show-icons:				false;
     icon-theme:				"Arc-X-D";
     display-drun:			"Apps";
     drun-display-format:		"{name}";
@@ -23,7 +18,7 @@ window {
 }
 listview {
     lines:                          10;
-    columns:                        3;
+    columns:                        1;
 }
 mainbox {
     border:  0;
@@ -134,3 +129,4 @@ textbox-prompt-colon {
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

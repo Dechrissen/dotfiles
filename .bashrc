@@ -51,7 +51,7 @@ export nanorc='/home/derek/.nanorc'
 # prompt
 #export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]] -> \[$(tput sgr0)\]"
 #export PS1="[\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;2m\]\h\e[0m] \[\033[38;5;6m\]\w\[$(tput sgr0)\] ❱ \[$(tput sgr0)\]"
-export PS1="\[\033[38;5;6m\]\w\[$(tput sgr0)\] ❱ \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;12m\]\w\[$(tput sgr0)\] ❱ \[$(tput sgr0)\]"
 
 
 # ignore case for tab-completion
