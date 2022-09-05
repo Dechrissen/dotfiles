@@ -17,7 +17,7 @@ home=~
 config=~/.config
 
 # pipe-delimited string of dotfiles that this script supports/maintains
-supported=".bashrc|.nanorc|.alacritty.yml|xfce4|neofetch|micro"
+supported=".bashrc|.nanorc|.alacritty.yml|xfce4|neofetch|micro|polybar"
 
 # copy every file that is supported from ~/ into  ~/dotfiles/
 for f in $home/*
@@ -38,4 +38,4 @@ done
 echo "Finished copying files from local machine into dotfiles repo."
 
 # auto-commit the changes to my remote
-cd $dotfiles && git add --all && git commit -m "Auto-update dotfiles with local changes." && git push origin master
+cd $dotfiles && git add --all && git commit -m "Auto-update dotfiles repo with local changes." && git push origin master

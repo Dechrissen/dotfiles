@@ -8,7 +8,7 @@ dotfiles=~/dotfiles
 home=~
 config=~/.config
 
-# copy every file that is supported from ~/ into  ~/dotfiles/
+# copy every file that is supported from  ~/dotfiles/ into ~
 for f in $dotfiles/*
 do
     if [[ $(basename $f) == ".config"  ]]; then
@@ -25,3 +25,4 @@ do
 done
 
 echo "Finished copying dotfiles into ~/"
+echo "Installation complete. Have a nice day!"
