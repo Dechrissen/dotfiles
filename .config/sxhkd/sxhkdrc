@@ -1,28 +1,10 @@
-#
-# wm independent hotkeys
-#
-
 # terminal emulator
 super + Return
 	alacritty
 
 # program launcher
 super + d
-	rofi -modi drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Hack Nerd Font 14"
-
-# show open window
-super + ctrl + d
-	rofi -modi drun -show window -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
-
-# show ssh sesssions
-super + shift + d
-	rofi -modi drun -show ssh -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+	rofi -modi drun -show run
 
 # power-menu 
 super + shift + e
@@ -73,7 +55,7 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
+super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
@@ -85,12 +67,8 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+super + Tab
+	bspc desktop -f next.occupied.local
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -107,7 +85,7 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + crtl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -135,7 +113,7 @@ super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + {Left,Down,Up,Right}
+super + m + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 #
 # Special hotkeys
@@ -145,22 +123,17 @@ super + {Left,Down,Up,Right}
 XF86AudioRaiseVolume
   amixer -q set Master 5%+ unmute
 
-# Still multimedia
 XF86AudioLowerVolume
   amixer -q set Master 5%- unmute
 
-# still
 XF86AudioMute
   amixer -D pulse sset Master toggle-mute
   
-# amixer -q set Master toggle
-# Simple amixer command seems to have problems unmuting device
-
 # Brightness up
 XF86MonBrightnessUp
   xbacklight -inc 10
 
-# And brightness down
+# Brightness down
 XF86MonBrightnessDown
   xbacklight -dec 10
 
