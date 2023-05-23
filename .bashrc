@@ -110,10 +110,8 @@ else # if it is 18 till 2
 fi
 
 d=$(date +"%B %d, %Y")
-# neofetch
-# figlet -t "$d" | lolcat
 
-# echo "$greet Today is $d."
-# fortune | cowsay
-# echo ""
+echo "$greet Today is $d."
+fortune -sa | cowsay
+echo ""
 

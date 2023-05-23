@@ -1,8 +1,11 @@
 git
 tmux
 cowsay
-fortune
+fortune-mod
 neofetch
 python3
 python-pip
 npm
+nomacs
+xclip
+wget

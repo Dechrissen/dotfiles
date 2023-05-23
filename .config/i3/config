@@ -213,6 +213,3 @@ bindsym $mod+r mode "resize"
 
 # Set the DPI
 exec xrandr --dpi 156
-
-# Start polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
