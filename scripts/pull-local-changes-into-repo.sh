@@ -35,6 +35,8 @@ do
     fi
 done
 
+pacman -Qe > ../packages.list
+
 echo "Finished copying files from local machine into dotfiles repo."
 
 # auto-commit the changes to my remote
