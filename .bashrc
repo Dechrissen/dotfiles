@@ -8,7 +8,7 @@
 # https://github.com/Dechrissen
 # https://derekandersen.net
 #
-# My personal .bashrc :)
+# My personal .bashrc (for Arch-based systems)
 
 # TESSERACT path
 export TESSERACT_PATH="/usr/bin/tesseract"
@@ -49,7 +49,8 @@ export SSH='/home/derek/.ssh'
 export nanorc='/home/derek/.nanorc'
 
 # prompt
-export PS1="[\[$(tput bold)\]\[\033[36m\]\u\[$(tput sgr0)\]\[\033[33m\]@\[$(tput bold)\]\[\033[32m\]\h\[$(tput sgr0)\] \[$(tput bold)\]\[\033[35m\]\w\[$(tput sgr0)\]] \[$(tput sgr0)\]"
+source ~/dotfiles/.git-prompt.sh
+export PS1="[\[$(tput bold)\]\[\033[36m\]\u\[$(tput sgr0)\]\[\033[33m\]@\[$(tput bold)\]\[\033[32m\]\h\[$(tput sgr0)\]] \[$(tput bold)\]\[\033[35m\]\w\[$(tput sgr0)\]\[\033[33m\]$(__git_ps1 " (%s)") \[$(tput sgr0)\]$\[$(tput sgr0)\] "
 
 
 # ignore case for tab-completion
