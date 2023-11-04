@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# get parent path of script and cd to it so relative paths work properly
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd "$parent_path"
+
 # to ensure the for-loops include files starting with a .
 shopt -s dotglob
 
@@ -25,4 +29,8 @@ do
 done
 
 echo "Finished copying dotfiles into ~/"
+
+echo "Installing packages..."
+yay -S --noconfirm - < ../packages.list
+
 echo "Installation complete. Have a nice day!"
