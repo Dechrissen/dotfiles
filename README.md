@@ -10,3 +10,9 @@ The `scripts` directory contains shell scripts that you can adapt and use on you
 _Important_: Do not run this script as root/with `sudo`; the scripts depends on being the user, so `~` corresponds to user's home directory.
 
 `install.sh` - Installs the contents of the repository onto your system.
+
+## TODO
+
+- include check in install.sh for installed fonts in /usr/share/fonts/TTF
+- install list of fonts and automatically move to /usr/share/fonts/TTF
+- list of fonts can be stored in fonts.list in this dir (Roboto Mono, Fira Code, Hack, Mononoki, etc.)
