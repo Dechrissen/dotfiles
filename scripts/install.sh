@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Install script for dotfiles, packages, mounting, etc.
+
+# Run this script with sudo!
+
 # get parent path of script and cd to it so relative paths work properly
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
@@ -23,6 +27,8 @@ do
          echo "Skipping directory scripts"
     elif [[ $(basename $f) == ".config"  ]]; then
         echo "Skipping directory .config"
+    elif [[ $(basename $f) == "conf"  ]]; then
+        echo "Skipping directory conf"
     elif [[ $(basename $f) == "README.md" ]]; then
         echo "Skipping file README.md"
     elif [[ $(basename $f) == "packages.list" ]]; then
@@ -39,6 +45,13 @@ do
 done
 
 echo "Finished copying dotfiles into ~/"
+
+# lightdm stuff
+apt-get -y install lightdm lightdm-gtk-greeter
+cp $dotfiles/conf/lightdm.conf /etc/lightdm/lightdm.conf
+# restart lightdm
+systemctl restart lightdm
+echo "Finished setting up lightdm"
 
 # install packages from packages.list
 # this needs to run before the following fstab section, as that depends on cifs-utils package
@@ -66,6 +79,9 @@ if [ ! -d "$bill" ]; then
         echo "WARN: .smbcredentials file does not exist in $home; please create it and then re-run this script!"
     fi
 fi
+
+# make scripts executable if necessary
+chmod +x $home/.config/polybar/launch.sh
 
 # done
 echo ""

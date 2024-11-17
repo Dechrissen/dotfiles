@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Terminate already running bar instances
+# need to install package psmisc to get killall command
 killall -q polybar
 
 # Wait until the processes have been shut down

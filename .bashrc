@@ -50,20 +50,18 @@ export nanorc='/home/derek/.nanorc'
 
 # prompt
 source ~/dotfiles/.git-prompt.sh
-export PS1="[\[$(tput bold)\]\[\033[36m\]\u\[$(tput sgr0)\]\[\033[33m\]@\[$(tput bold)\]\[\033[32m\]\h\[$(tput sgr0)\]] \[$(tput bold)\]\[\033[35m\]\w\[$(tput sgr0)\]\[\033[33m\]$(__git_ps1 " (%s)") \[$(tput sgr0)\]$\[$(tput sgr0)\] "
+export PS1="\[\033[31m\]\u\[$(tput sgr0)\]@\[\033[32m\]\h\[$(tput sgr0)\] \[\033[33m\]\w\[$(tput sgr0)\]\[\033[35m\]$(__git_ps1 " (%s)") \[$(tput sgr0)\]$\[$(tput sgr0)\] "
 
 
 # ignore case for tab-completion
 bind "set completion-ignore-case on"
 
-# Aliases
+# File aliases
 alias ls='ls -a --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias la='ls -A'
-
-alias pushdots='cd ~/dotfiles && git pull && cd scripts && chmod u+x pull-local-changes-into-repo.sh && ./pull-local-changes-into-repo.sh'
 
 # Python aliases
 alias python=python3
@@ -73,7 +71,12 @@ alias pip=pip3
 alias banjovps='ssh -i ~/.ssh/banjo -p 801 dechrissen@banjospeedruns.com'
 alias vps='ssh -i ~/.ssh/vps -p 8012 derek@derekandersen.net'
 
+# Other aliases
 alias neofetch="clear && neofetch"
+alias pushdots='cd ~/dotfiles && git pull && cd scripts && chmod u+x pull-local-changes-into-repo.sh && ./pull-local-changes-into-repo.sh'
+
+# ThinkPad aliases
+alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'percentage'"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
