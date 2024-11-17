@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # get parent path of script and cd to it so relative paths work properly
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
@@ -30,7 +30,23 @@ done
 
 echo "Finished copying dotfiles into ~/"
 
+# install packages from packages.list
+# this needs to run before the following fstab section, as that depends on cifs-utils package
 echo "Installing packages..."
-yay -S --noconfirm - < ../packages.list
+sudo dpkg --set-selections < ../packages.list
+sudo apt-get update
+sudo apt-get -u dselect-upgrade
 
+# append server entry to fstab, and mount all
+echo "Creating mount point..."
+mkdir -p /mnt/bill
+server_entry="//bill.home/derek /mnt/bill   cifs    credentials=/home/derek/.smbcredentials,iocharset=utf8,noserverino,noperm,vers=3.0  0   0"
+echo "Appending server entry to fstab..."
+sudo echo "$server_entry" >> /etc/fstab
+echo "Reloading daemons..."
+sudo systemctl daemon-reload
+echo "Mounting..."
+sudo mount -a
+
+# done
 echo "Installation complete. Have a nice day!"

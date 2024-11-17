@@ -39,8 +39,8 @@ do
     fi
 done
 
-# back up packages using 'quiet' and 'explicitly installed' options
-pacman -Qqe > ../packages.list
+# back up packages
+dpkg --get-selections > ../packages.list
 
 echo "Finished copying files from local machine into dotfiles repo."
 

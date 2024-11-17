@@ -1,6 +1,6 @@
 # dotfiles
 
-The various dotfiles and configs I use on my Linux systems (Arch-based).
+The various dotfiles and configs I use on my Linux systems.
 
 ## Scripts
 

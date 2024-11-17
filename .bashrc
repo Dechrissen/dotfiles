@@ -8,7 +8,7 @@
 # https://github.com/Dechrissen
 # https://derekandersen.net
 #
-# My personal .bashrc (for Arch-based systems)
+# My personal .bashrc (for Debian-based systems)
 
 # TESSERACT path
 export TESSERACT_PATH="/usr/bin/tesseract"
@@ -63,7 +63,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias la='ls -A'
 
-alias pushdots='cd ~/dotfiles && git pull && cd scripts && chmod u+x pull-local-changes.sh && ./pull-local-changes.sh'
+alias pushdots='cd ~/dotfiles && git pull && cd scripts && chmod u+x pull-local-changes-into-repo.sh && ./pull-local-changes-into-repo.sh'
 
 # Python aliases
 alias python=python3
