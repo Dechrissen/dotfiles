@@ -359,6 +359,7 @@ libev-perl:amd64				install
 libev4:amd64					install
 libevdev2:amd64					install
 libevent-2.1-7:amd64				install
+libevent-core-2.1-7:amd64			install
 libexif12:amd64					install
 libexpat1:amd64					install
 libext2fs2:amd64				install
@@ -1041,6 +1042,7 @@ tesseract-ocr					install
 tesseract-ocr-eng				install
 tesseract-ocr-osd				install
 timgm6mb-soundfont				install
+tmux						install
 toilet						install
 toilet-fonts					install
 traceroute					install

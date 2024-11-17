@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # get parent path of script and cd to it so relative paths work properly
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )

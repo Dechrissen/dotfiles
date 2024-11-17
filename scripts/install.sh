@@ -8,15 +8,25 @@ cd "$parent_path"
 shopt -s dotglob
 
 # set variables to use
-dotfiles=~/dotfiles
-home=~
-config=~/.config
+dotfiles=/home/$SUDO_USER/dotfiles
+home=/home/$SUDO_USER
+config=/home/$SUDO_USER/.config
+bill=/mnt/bill
+SMBCREDENTIALS=/home/$SUDO_USER/.smbcredentials
 
 # copy every file that is supported from  ~/dotfiles/ into ~
 for f in $dotfiles/*
 do
-    if [[ $(basename $f) == ".config"  ]]; then
-        echo "Skipping .config"
+    if [[ $(basename $f) == ".git"  ]]; then
+         echo "Skipping directory .git"
+    elif [[ $(basename $f) == "scripts"  ]]; then
+         echo "Skipping directory scripts"
+    elif [[ $(basename $f) == ".config"  ]]; then
+        echo "Skipping directory .config"
+    elif [[ $(basename $f) == "README.md" ]]; then
+        echo "Skipping file README.md"
+    elif [[ $(basename $f) == "packages.list" ]]; then
+        echo "Skipping file packages.list"
     else
         cp $f $home && echo $(basename $f) "copied into ~/"
     fi
@@ -33,20 +43,30 @@ echo "Finished copying dotfiles into ~/"
 # install packages from packages.list
 # this needs to run before the following fstab section, as that depends on cifs-utils package
 echo "Installing packages..."
-sudo dpkg --set-selections < ../packages.list
-sudo apt-get update
-sudo apt-get -u dselect-upgrade
+dpkg --set-selections < ../packages.list
+apt-get update
+apt-get -u dselect-upgrade
 
 # append server entry to fstab, and mount all
-echo "Creating mount point..."
-mkdir -p /mnt/bill
-server_entry="//bill.home/derek /mnt/bill   cifs    credentials=/home/derek/.smbcredentials,iocharset=utf8,noserverino,noperm,vers=3.0  0   0"
-echo "Appending server entry to fstab..."
-sudo echo "$server_entry" >> /etc/fstab
-echo "Reloading daemons..."
-sudo systemctl daemon-reload
-echo "Mounting..."
-sudo mount -a
+# but first check if the mount point does NOT already exist, and proceed if so
+if [ ! -d "$bill" ]; then
+    # then check to make sure .smbcredentials file exists
+    if [ -f "$SMBCREDENTIALS" ]; then
+        echo ".smbcredentials file found."
+        echo "Creating mount point..."
+        mkdir "$bill"
+        server_entry="//bill.home/derek /mnt/bill   cifs    credentials=/home/derek/.smbcredentials,iocharset=utf8,noserverino,noperm,vers=3.0  0   0"
+        echo "Appending server entry to fstab..."
+        echo "$server_entry" >> /etc/fstab
+        echo "Reloading daemons..."
+        systemctl daemon-reload
+        echo "Mounting..."
+        mount -a
+    else
+        echo "WARN: .smbcredentials file does not exist in $home; please create it and then re-run this script!"
+    fi
+fi
 
 # done
+echo ""
 echo "Installation complete. Have a nice day!"
