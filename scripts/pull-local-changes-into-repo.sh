@@ -27,7 +27,7 @@ supported=".bashrc|.nanorc|.alacritty.yml|xfce4|neofetch|micro|polybar|nitrogen|
 for f in $home/*
 do
     if is_in_list "$supported" "|" $(basename $f); then
-        cp $f $dotfiles && echo $(basename $f) "copied into dotfiles"
+        cp -r $f $dotfiles && echo $(basename $f) "copied into dotfiles"
     fi
 done
 
