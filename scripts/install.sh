@@ -60,6 +60,12 @@ dpkg --set-selections < ../packages.list
 apt-get update
 apt-get -u dselect-upgrade
 
+# install remarkable markdown editor (.deb file)
+mkdir -p $home/Downloads
+wget -O $home/Downloads/remarkable.deb remarkableapp.github.io/files/remarkable_1.95.deb
+apt -y install -f $home/Downloads/remarkable.deb
+echo "Finished installing remarkable"
+
 # append server entry to fstab, and mount all
 # but first check if the mount point does NOT already exist, and proceed if so
 if [ ! -d "$bill" ]; then
