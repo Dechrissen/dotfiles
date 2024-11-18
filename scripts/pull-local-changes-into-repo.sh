@@ -21,7 +21,7 @@ home=~
 config=~/.config
 
 # pipe-delimited string of dotfiles that this script supports/maintains
-supported=".bashrc|.nanorc|.alacritty.yml|xfce4|neofetch|micro|polybar|nitrogen|rofi|bspwm|sxhkd|dunst|picom.conf|Thunar"
+supported=".bashrc|.nanorc|.alacritty.yml|xfce4|neofetch|micro|polybar|nitrogen|rofi|bspwm|sxhkd|dunst|picom.conf|Thunar|sakura|.remarkable"
 
 # copy every file that is supported from ~/ into  ~/dotfiles/
 for f in $home/*
