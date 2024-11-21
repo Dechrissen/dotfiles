@@ -17,8 +17,9 @@ cd $home/dev
 declare -a repos=(
     website
     dechrissen.github.io
-    notes
+    knowledge
     tools
+    hstk
 )
 
 for repo in "${repos[@]}"; do
