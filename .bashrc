@@ -12,7 +12,7 @@
 
 # TESSERACT path
 export TESSERACT_PATH="/usr/bin/tesseract"
-export TESSDATA_PREFIX="/usr/share/tessdata/"
+export TESSDATA_PREFIX="/usr/share/tesseract-ocr/5/tessdata/"
 
 # PATH
 # what to add to path
@@ -64,8 +64,8 @@ alias egrep='egrep --color=auto'
 alias la='ls -A'
 
 # Python aliases
-alias python=python3
-alias pip=pip3
+#alias python=python3
+#alias pip=pip3
 
 # SSH aliases
 alias banjovps='ssh -i ~/.ssh/banjo -p 801 dechrissen@banjospeedruns.com'

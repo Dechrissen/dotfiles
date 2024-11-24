@@ -190,6 +190,7 @@ gvfs-libs:amd64					install
 gzip						install
 hicolor-icon-theme				install
 hostname					install
+htop						install
 hunspell-en-us					install
 i3						install
 i3-wm						install
@@ -221,6 +222,7 @@ iso-codes					install
 ispell						install
 iucode-tool					install
 iw						install
+javascript-common				install
 jp2a						install
 kbd						install
 keepassxc					install
@@ -392,6 +394,7 @@ libevent-2.1-7:amd64				install
 libevent-core-2.1-7:amd64			install
 libexif12:amd64					install
 libexpat1:amd64					install
+libexpat1-dev:amd64				install
 libext2fs2:amd64				install
 libfaad2:amd64					install
 libfakeroot:amd64				install
@@ -530,7 +533,10 @@ libjemalloc2:amd64				install
 libjim0.81:amd64				install
 libjpeg-turbo-progs				install
 libjpeg62-turbo:amd64				install
+libjs-jquery					install
 libjs-mathjax					install
+libjs-sphinxdoc					install
+libjs-underscore				install
 libjson-c5:amd64				install
 libjson-glib-1.0-0:amd64			install
 libjson-glib-1.0-common				install
@@ -700,7 +706,10 @@ libpthread-stubs0-dev:amd64			install
 libptytty0:amd64				install
 libpulse0:amd64					install
 libpulsedsp:amd64				install
+libpython3-dev:amd64				install
 libpython3-stdlib:amd64				install
+libpython3.11:amd64				install
+libpython3.11-dev:amd64				install
 libpython3.11-minimal:amd64			install
 libpython3.11-stdlib:amd64			install
 libqmi-glib5:amd64				install
@@ -1055,6 +1064,7 @@ python3-dbus					install
 python3-debconf					install
 python3-debian					install
 python3-debianbts				install
+python3-dev					install
 python3-distutils				install
 python3-enchant					install
 python3-gi					install
@@ -1067,6 +1077,8 @@ python3-lib2to3					install
 python3-lxml:amd64				install
 python3-markdown				install
 python3-minimal					install
+python3-pip					install
+python3-pip-whl					install
 python3-pkg-resources				install
 python3-psutil					install
 python3-pycurl					install
@@ -1076,14 +1088,19 @@ python3-pysimplesoap				install
 python3-reportbug				install
 python3-requests				install
 python3-setuptools				install
+python3-setuptools-whl				install
 python3-six					install
 python3-smbc					install
 python3-soupsieve				install
 python3-urllib3					install
+python3-venv					install
 python3-webencodings				install
+python3-wheel					install
 python3-yaml					install
 python3.11					install
+python3.11-dev					install
 python3.11-minimal				install
+python3.11-venv					install
 qt5-gtk-platformtheme:amd64			install
 qttranslations5-l10n				install
 qtwayland5:amd64				install
@@ -1202,4 +1219,5 @@ xterm						install
 xz-utils					install
 yudit-common					install
 zlib1g:amd64					install
+zlib1g-dev:amd64				install
 zstd						install
